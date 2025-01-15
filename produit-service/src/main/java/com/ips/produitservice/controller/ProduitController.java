@@ -16,7 +16,7 @@ public class ProduitController {
         this.repository = repository;
     }
 
-    @PostMapping("/produit")
+    @PostMapping("/produits")
     public Produit save(@RequestBody Produit produit){
         return repository.save(produit);
     }
@@ -27,7 +27,7 @@ public class ProduitController {
         return repository.findAll();
     }
 
-    @GetMapping("/produit/{id}")
+    @GetMapping("/produits/{id}")
     public Produit findById(@PathVariable("id") Long id){
         return repository.findById(id).orElseThrow(()-> new EntityNotFoundException("This product not found with the ID:: "+id));
     }

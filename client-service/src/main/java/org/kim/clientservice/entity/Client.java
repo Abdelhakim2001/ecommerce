@@ -1,4 +1,4 @@
-package com.ips.produitservice.entity;
+package org.kim.clientservice.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,14 +13,10 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 
-public class Produit {
-
-
-
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProduit;
+public class Client {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idClient;
     private String name;
-
-
-
+    private String email;
 }
